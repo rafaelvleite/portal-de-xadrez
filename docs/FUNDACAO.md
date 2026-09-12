@@ -1,16 +1,17 @@
-# Documento de Fundação — Portal de Xadrez
+# Documento de Fundação — Xadrez Hoje
 
 **Status:** Fundação / descoberta  
-**Versão:** 1.0  
+**Versão:** 1.1
 **Data:** 12 de setembro de 2026  
 **Fundador:** Rafael Vicente Leite  
-**Nome:** “Portal de Xadrez” é um codinome provisório
+**Nome:** Xadrez Hoje
+**Domínio:** xadrezhoje.com.br
 
 ## 1. Resumo executivo
 
-O Portal de Xadrez será uma plataforma independente de mídia e descoberta de conteúdo para o público de xadrez em português. O produto reunirá notícias, cobertura de torneios, páginas permanentes de jogadores e eventos, partidas, vídeos de diferentes criadores, busca e uma newsletter diária no formato Morning Brief.
+O Xadrez Hoje será uma plataforma independente de mídia e descoberta de conteúdo para o público de xadrez em português. O produto reunirá notícias, cobertura de torneios, páginas permanentes de jogadores e eventos, partidas, vídeos de diferentes criadores, busca e uma newsletter diária no formato Morning Brief.
 
-O portal será lançado primeiro no Brasil, aproveitando a distribuição, a autoridade e o acervo do Xadrez Brasil, mas terá identidade editorial própria. O Xadrez Brasil funcionará como motor inicial de audiência, não como limite de cobertura. A arquitetura será preparada para múltiplos idiomas, sem dividir a operação editorial antes de validar o produto em português.
+O portal será lançado no Brasil como uma operação editorial inteiramente independente. O MVP será exclusivamente em **pt-BR**, com conteúdo focado no cenário nacional de xadrez. A aquisição inicial combinará busca, redes sociais, newsletter, distribuição orgânica e parcerias editoriais.
 
 O objetivo não é criar apenas um blog. É construir a camada de informação, descoberta e distribuição do ecossistema brasileiro de xadrez.
 
@@ -20,7 +21,7 @@ O conteúdo de xadrez em português está disperso entre YouTube, redes sociais,
 
 Há uma oportunidade de reunir essa oferta fragmentada em um produto diário, útil tanto para o enxadrista experiente quanto para jogadores casuais, pais, alunos, professores e fãs de grandes eventos.
 
-O fundador possui uma vantagem de distribuição difícil de replicar: o Xadrez Brasil já alcança aproximadamente 1,5 a 2 milhões de visualizações mensais e acumula conteúdo desde 2018. Essa audiência pode acelerar o lançamento, a coleta de assinantes e o aprendizado sobre formatos editoriais.
+O lançamento deve privilegiar canais próprios, descoberta orgânica e parcerias que preservem a autonomia editorial da marca. A coleta de assinantes e o aprendizado sobre formatos editoriais devem formar uma base direta e mensurável de audiência.
 
 ## 3. Missão, visão e promessa
 
@@ -34,14 +35,22 @@ Ser a principal propriedade digital independente de xadrez em português e, apó
 
 ### Promessa ao usuário
 
-“Tudo o que importa no xadrez, em português, organizado em um só lugar.”
+“O xadrez que importa, hoje — em português e com contexto.”
+
+### Identidade editorial
+
+A direção de marca, voz, linguagem e sistema visual do MVP está documentada em [Identidade e tom editorial](IDENTIDADE_EDITORIAL.md).
+
+### Política editorial e direitos
+
+As regras operacionais para fontes, atribuição, vídeos de terceiros, IA, correções e dados de xadrez estão em [Política editorial, fontes e direitos de uso](POLITICA_EDITORIAL_E_DIREITOS.md).
 
 ## 4. Público-alvo
 
 ### Público principal
 
 - jogadores e fãs brasileiros que acompanham torneios, partidas e criadores;
-- audiência atual e potencial do Xadrez Brasil;
+- pessoas que acompanham canais, streamers e comunidades de xadrez em português;
 - alunos e praticantes em busca de vídeos, partidas e explicações;
 - pais que procuram conteúdo, eventos e recursos para os filhos.
 
@@ -53,7 +62,7 @@ Ser a principal propriedade digital independente de xadrez em português e, apó
 
 ## 5. Posicionamento
 
-O portal será uma marca independente, com possível assinatura discreta “uma iniciativa do Xadrez Brasil” ou “powered by Xadrez Brasil”. Ele não será apresentado como o blog oficial de um único canal.
+O portal será uma marca 100% independente, sem marca endossadora, co-branding ou vínculo apresentado com qualquer canal, organização ou grupo. Ele não será apresentado como o blog oficial de um único canal.
 
 Isso permite:
 
@@ -79,7 +88,7 @@ Páginas de jogadores com perfil, notícias, partidas, torneios, vídeos e conte
 
 ### 6.4 Descoberta e busca de vídeos
 
-Índice pesquisável de vídeos de xadrez, começando pelo catálogo do Xadrez Brasil desde 2018 e expandindo para criadores relevantes. A busca deve funcionar por título, jogador, evento, abertura, tema, canal e data.
+Índice pesquisável de vídeos de xadrez, começando por canais elegíveis e conteúdos com metadados disponíveis pela API oficial e expandindo para criadores relevantes. A busca deve funcionar por título, jogador, evento, abertura, tema, canal e data.
 
 Vídeos de terceiros serão incorporados ou vinculados conforme as regras das plataformas, sempre com atribuição e valor editorial adicional.
 
@@ -96,7 +105,7 @@ O Morning Brief é simultaneamente:
 
 ## 7. Flywheel de crescimento
 
-1. Xadrez Brasil apresenta o portal e capta os primeiros usuários.
+1. Busca, redes sociais, newsletter e parcerias levam os primeiros usuários ao portal.
 2. O portal converte visitantes em assinantes do Morning Brief.
 3. A newsletter gera tráfego recorrente para notícias e páginas de eventos.
 4. As páginas permanentes e a cobertura geram tráfego orgânico.
@@ -137,7 +146,7 @@ O primeiro lançamento deve provar três comportamentos: pessoas entram, encontr
 - páginas de notícias com fontes e conteúdo relacionado;
 - diretório de torneios e página individual de torneio;
 - catálogo inicial de jogadores;
-- importação do acervo do Xadrez Brasil via YouTube API;
+- importação de um catálogo inicial de vídeos via YouTube API;
 - página individual de vídeo;
 - busca full-text por vídeos e conteúdo;
 - tags para jogadores, eventos, canais, temas e aberturas;
@@ -175,15 +184,21 @@ O primeiro lançamento deve provar três comportamentos: pessoas entram, encontr
 - Next.js com TypeScript;
 - renderização orientada a SEO, usando geração estática e revalidação quando adequado;
 - design responsivo e desempenho como requisitos de produto;
-- internacionalização prevista no modelo de rotas e conteúdo desde o início.
+- idioma único `pt-BR`, sem rotas, traduções ou modelagem multilíngue no MVP.
+
+As decisões de stack, ambientes e deploy estão detalhadas em [Stack e ambientes](arquitetura/STACK_E_AMBIENTES.md) e no [ADR 0001](adr/0001-stack-e-ambientes.md).
+
+A estratégia de CMS está definida no [ADR 0002 — CMS editorial próprio mínimo](adr/0002-cms-editorial-proprio.md).
+
+A estratégia do Morning Brief está definida no [ADR 0003 — Morning Brief próprio com Mailjet](adr/0003-newsletter-morning-brief.md).
 
 ### Dados e serviços
 
 - PostgreSQL/Supabase;
-- CMS editorial leve, inicialmente próprio ou headless;
+- CMS editorial próprio mínimo, com revisão e publicação internas;
 - YouTube Data API para ingestão autorizada de metadados;
 - busca inicialmente no PostgreSQL, com possibilidade de migrar para serviço dedicado;
-- provedor de email/newsletter com métricas e automação;
+- Mailjet para entrega e eventos do Morning Brief; assinatura e consentimento ficam no produto;
 - armazenamento de imagens com transformação e CDN;
 - analytics de produto, Google Search Console e monitoramento de erros.
 
@@ -208,7 +223,7 @@ O primeiro lançamento deve provar três comportamentos: pessoas entram, encontr
 - metadados sociais e dados estruturados, incluindo Article, VideoObject e BreadcrumbList quando aplicáveis;
 - links internos entre notícias, jogadores, eventos, partidas e vídeos;
 - títulos e descrições editoriais, sem geração massiva de páginas vazias;
-- chamadas nos vídeos e descrições do Xadrez Brasil;
+- distribuição por canais próprios, redes sociais e parcerias editoriais;
 - captura do Morning Brief em pontos naturais da navegação.
 
 ## 13. Métricas de sucesso
@@ -220,7 +235,7 @@ Usuários ativos semanais que consomem pelo menos dois conteúdos ou retornam ao
 ### Aquisição
 
 - usuários e sessões por canal;
-- percentual de tráfego vindo do Xadrez Brasil, busca, Discover, direto e referrals;
+- percentual de tráfego vindo de busca, Discover, redes sociais, direto e referrals;
 - inscrições no Morning Brief;
 - custo de aquisição, quando houver mídia paga.
 
@@ -241,7 +256,7 @@ Usuários ativos semanais que consomem pelo menos dois conteúdos ou retornam ao
 
 ### Metas de validação
 
-- importar e organizar o acervo inicial do Xadrez Brasil;
+- importar e organizar o catálogo inicial de vídeos elegíveis;
 - lançar uma experiência editorial utilizável em até oito semanas de trabalho focado;
 - alcançar os primeiros 1.000 assinantes do Morning Brief;
 - medir retenção e monetização antes de expandir idioma ou escopo;
@@ -267,7 +282,7 @@ Adicionar páginas de torneios, captura de email, template do Morning Brief, slo
 
 ### Fase 4 — Beta e lançamento
 
-Popular conteúdo, revisar SEO/desempenho, testar o ciclo editorial e lançar para uma parcela da audiência do Xadrez Brasil antes da divulgação ampla.
+Popular conteúdo, revisar SEO/desempenho, testar o ciclo editorial e abrir o beta para uma audiência inicial antes da divulgação ampla.
 
 ### Fase 5 — Crescimento
 
@@ -302,10 +317,13 @@ Melhorar busca e recomendação, ampliar criadores e dados, vender publicidade d
 
 ## 16. Decisões já tomadas
 
+- usar o nome **Xadrez Hoje** e o domínio **xadrezhoje.com.br**;
+- adotar a proposta “O xadrez que importa, hoje — em português e com contexto”;
+- usar uma direção visual editorial baseada em azul-noite, vermelho-relógio e papel;
+- operar como marca 100% independente, sem endosso, associação ou dependência de marca externa;
+- adotar política de fontes, atribuição, IA e direitos de uso específica para o MVP;
 - lançar primeiro em português e focar no Brasil;
-- preparar a tecnologia para múltiplos idiomas desde o início;
-- usar uma marca independente do Xadrez Brasil;
-- usar o Xadrez Brasil como principal motor inicial de distribuição;
+- restringir o MVP a `pt-BR` e ao conteúdo editorial nacional;
 - combinar conteúdo editorial com dados, busca e descoberta;
 - tratar o Morning Brief como produto central, não acessório;
 - priorizar valor editorial original e revisão humana;
@@ -313,8 +331,7 @@ Melhorar busca e recomendação, ampliar criadores e dados, vender publicidade d
 
 ## 17. Decisões em aberto
 
-- nome definitivo e domínio;
-- identidade visual e tom editorial;
+- refinamento do wordmark e do monograma após aplicação no frontend;
 - frequência exata do Morning Brief;
 - CMS próprio versus solução headless;
 - provedor de newsletter;
@@ -326,4 +343,3 @@ Melhorar busca e recomendação, ampliar criadores e dados, vender publicidade d
 ## 18. Critério de continuidade
 
 Após o beta, o produto será avaliado por oito a doze semanas. A continuidade e o investimento seguinte dependerão de evidências de recorrência, crescimento da newsletter, tráfego orgânico, uso da busca e potencial de receita. Expansão de idioma só será considerada depois de o ciclo editorial e de distribuição funcionar de forma repetível em português.
-

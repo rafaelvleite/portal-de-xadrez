@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 160" role="img" aria-labelledby="title desc">
+  <title id="title">Xadrez Hoje</title>
+  <desc id="desc">Wordmark provisório do Xadrez Hoje, com Xadrez em azul-noite e Hoje em vermelho.</desc>
+  <g font-family="Inter, Arial, sans-serif" font-size="92" font-weight="800" letter-spacing="-3">
+    <text x="24" y="108" fill="#102A43">XADREZ</text>
+    <text x="402" y="108" fill="#D13F37">HOJE</text>
+  </g>
+  <rect x="24" y="128" width="540" height="8" rx="4" fill="#102A43"/>
+  <rect x="564" y="128" width="72" height="8" rx="4" fill="#D13F37"/>
+</svg>
