@@ -23,7 +23,7 @@ Não haverá ORM no primeiro corte: o schema, as migrations, as políticas de ac
 | Migrations | Supabase CLI + SQL versionado | Evolução reproduzível de schema, RLS e dados de referência |
 | Storage | Supabase Storage | Imagens e arquivos próprios, com políticas de acesso |
 | Tipos de banco | Supabase CLI | Geração de `database.types.ts` após mudanças de schema |
-| CI | GitHub Actions | Lint, typecheck e build a cada pull request e merge na `main` |
+| CI | GitHub Actions | Lint, typecheck, build e reset/lint das migrations a cada pull request e merge na `main` |
 | Observabilidade inicial | Logs da Vercel + logs do Supabase | Diagnóstico do MVP; monitoramento dedicado será decidido depois |
 
 O App Router é a base atual do Next.js para aplicações com Server Components e rotas por sistema de arquivos. [Documentação do Next.js](https://nextjs.org/docs/app)
@@ -135,4 +135,4 @@ Um `.env.example` documentará apenas os nomes das variáveis, sem valores. `.en
 - [x] Projeto remoto Supabase de produção criado; Supabase local funciona para desenvolvimento.
 - [x] `.env.example` criado e secrets configurados apenas nos respectivos ambientes.
 - [x] Supabase CLI inicializado; migrations e seed local serão adicionados com o primeiro schema.
-- [x] Pipeline mínimo executa lint, typecheck e build. A validação de migrations entra no mesmo fluxo assim que houver a primeira migration.
+- [x] Pipeline mínimo executa lint, typecheck, build e reset/lint das migrations no Supabase local.

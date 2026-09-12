@@ -36,3 +36,26 @@ jobs:
 
       - name: Gerar build de produção
         run: npm run build
+
+  banco:
+    name: Migrations do Supabase
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Obter código
+        uses: actions/checkout@v4
+
+      - name: Configurar Supabase CLI
+        uses: supabase/setup-cli@v1
+        with:
+          version: 2.72.7
+
+      - name: Iniciar Supabase local
+        run: supabase start
+
+      - name: Reproduzir migrations e seed local
+        run: supabase db reset
+
+      - name: Verificar schema
+        run: supabase db lint --local
