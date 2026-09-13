@@ -7,7 +7,7 @@ import {
   requestChanges,
   saveArticle,
   submitForReview
-} from "../../actions";
+} from "../../../actions";
 
 const statusLabels: Record<string, string> = {
   draft: "Rascunho",

@@ -1,8 +1,8 @@
 import { getCurrentProfile } from "@/lib/auth";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { signOut } from "./actions";
-import "./admin.css";
+import { signOut } from "../actions";
+import "../admin.css";
 
 export const dynamic = "force-dynamic";
 
