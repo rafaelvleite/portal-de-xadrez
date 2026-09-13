@@ -9,10 +9,10 @@ O painel fica em `/admin` e usa magic link do Supabase Auth. Não existe formul�
 O primeiro administrador é criado uma única vez por um operador com acesso ao ambiente local, usando:
 
 ```bash
-EDITOR_EMAIL=editor@exemplo.com EDITOR_DISPLAY_NAME="Nome" node --env-file=.env scripts/invite-editor.mjs
+INVITE_EDITOR_EMAIL=editor@exemplo.com INVITE_EDITOR_DISPLAY_NAME="Nome" INVITE_SITE_URL=https://xadrezhoje.com.br node --env-file=.env scripts/invite-editor.mjs
 ```
 
-O script envia o convite e promove o perfil criado pelo trigger para `admin`. Depois disso, um administrador pode convidar novos perfis pelo mesmo processo controlado até que a tela própria de gestão de usuários seja necessária.
+O script envia o convite e promove o perfil criado pelo trigger para `admin`. As variáveis com prefixo `INVITE_` existem apenas durante o comando e não são registradas no `.env`. Depois disso, um administrador pode convidar novos perfis pelo mesmo processo controlado até que a tela própria de gestão de usuários seja necessária.
 
 ## Fluxo de matéria
 

@@ -1,11 +1,11 @@
 import { createClient } from "@supabase/supabase-js";
 
-const email = process.env.EDITOR_EMAIL?.trim();
-const displayName = process.env.EDITOR_DISPLAY_NAME?.trim() || email?.split("@")[0];
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
+const email = process.env.INVITE_EDITOR_EMAIL?.trim() || process.env.EDITOR_EMAIL?.trim();
+const displayName = process.env.INVITE_EDITOR_DISPLAY_NAME?.trim() || process.env.EDITOR_DISPLAY_NAME?.trim() || email?.split("@")[0];
+const siteUrl = (process.env.INVITE_SITE_URL || process.env.NEXT_PUBLIC_SITE_URL)?.replace(/\/$/, "");
 
 if (!email || !siteUrl || !process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
-  throw new Error("Defina EDITOR_EMAIL e carregue as variáveis do .env antes de convidar um editor.");
+  throw new Error("Defina INVITE_EDITOR_EMAIL e INVITE_SITE_URL, além das variáveis do .env, antes de convidar um editor.");
 }
 
 const supabase = createClient(
