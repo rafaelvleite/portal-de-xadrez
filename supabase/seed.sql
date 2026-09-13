@@ -63,6 +63,11 @@ from public.articles article
 join public.players player on player.slug = 'ana-exemplo'
 where article.slug = 'rascunho-exemplo-local';
 
+insert into public.article_sources (article_id, source_name, source_url, source_type, editorial_note)
+select article.id, 'Fonte fictícia de desenvolvimento', 'https://example.com/fonte-ficticia', 'primary', 'Registro criado apenas para testar o formulário editorial local.'
+from public.articles article
+where article.slug = 'rascunho-exemplo-local';
+
 insert into public.article_tournaments (article_id, tournament_id)
 select article.id, tournament.id
 from public.articles article
