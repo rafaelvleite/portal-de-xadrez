@@ -1,6 +1,5 @@
 "use client";
 
-import { createClient } from "@/lib/supabase/browser";
 import { FormEvent, useState } from "react";
 
 export default function AdminLoginPage() {
@@ -13,18 +12,15 @@ export default function AdminLoginPage() {
     setIsSubmitting(true);
     setMessage("");
 
-    const supabase = createClient();
-    const { error } = await supabase.auth.signInWithOtp({
-      email,
-      options: {
-        shouldCreateUser: false,
-        emailRedirectTo: `${window.location.origin}/auth/callback?next=/admin`
-      }
+    const response = await fetch("/auth/magic-link", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email })
     });
 
     setIsSubmitting(false);
     setMessage(
-      error
+      !response.ok
         ? "Não foi possível enviar o link. Use um e-mail editorial convidado."
         : "Se o e-mail estiver convidado, o link de acesso chegará em instantes."
     );

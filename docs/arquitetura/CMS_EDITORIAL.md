@@ -4,7 +4,7 @@
 
 ## Acesso
 
-O painel fica em `/admin` e usa magic link do Supabase Auth. Não existe formulário de cadastro público: o projeto remoto está configurado com `enable_signup = false`.
+O painel fica em `/admin` e usa um magic link gerado pelo Admin API do Supabase e entregue pelo Mailjet. Não existe formulário de cadastro público: o projeto remoto está configurado com `enable_signup = false`.
 
 O primeiro administrador é criado uma única vez por um operador com acesso ao ambiente local, usando:
 
