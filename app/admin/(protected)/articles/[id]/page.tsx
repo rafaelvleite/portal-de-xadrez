@@ -1,5 +1,6 @@
 import { getCurrentProfile } from "@/lib/auth";
 import { createClient } from "@/lib/supabase/server";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   approveArticle,
@@ -51,7 +52,10 @@ export default async function ArticleEditorPage({ params }: { params: Promise<{ 
           <h1>{article.title}</h1>
           <p>Slug: <code>{article.slug}</code></p>
         </div>
-        <span className={`status-pill status-${article.status}`}>{statusLabels[article.status]}</span>
+        <div className="article-header-actions">
+          <Link className="secondary-link" href={`/admin/articles/${article.id}/preview`}>Pré-visualizar</Link>
+          <span className={`status-pill status-${article.status}`}>{statusLabels[article.status]}</span>
+        </div>
       </header>
 
       <div className="editor-layout">

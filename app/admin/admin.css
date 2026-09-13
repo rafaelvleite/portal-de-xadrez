@@ -97,6 +97,25 @@
   margin-bottom: 2.5rem;
 }
 
+.article-header-actions { display: flex; align-items: center; gap: 0.75rem; }
+
+.secondary-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.55rem 0.8rem;
+  color: #102a43;
+  border: 1px solid #bcccdc;
+  border-radius: 0.25rem;
+  background: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.secondary-link:hover,
+.secondary-link:focus-visible { color: #fff; border-color: #102a43; background: #102a43; }
+
 .admin-page-header h1,
 .admin-login h1 {
   max-width: 45rem;
@@ -233,6 +252,26 @@ td { font-size: 0.95rem; }
 .login-form button { margin-top: 1rem; }
 .form-message { margin-top: 1rem !important; font-size: 0.9rem !important; }
 
+.article-preview { max-width: 54rem; margin: 0 auto; }
+.preview-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; }
+.preview-toolbar p:not(.admin-kicker) { margin: 0; color: #52606d; font-size: 0.9rem; }
+.preview-paper { padding: clamp(1.5rem, 6vw, 5rem); background: #fff; border: 1px solid #d9e2ec; box-shadow: 0 0.8rem 2.5rem rgba(16, 42, 67, 0.08); }
+.preview-section { margin: 0 0 1.25rem; color: #d13f37; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+.preview-paper h1 { margin: 0; color: #102a43; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.5rem, 7vw, 4.75rem); letter-spacing: -0.05em; line-height: 0.98; }
+.preview-summary { margin: 1.5rem 0 0; color: #334e68; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.25rem, 2vw, 1.55rem); line-height: 1.4; }
+.preview-date { margin: 1.25rem 0 2.5rem; color: #7b8794; font-size: 0.85rem; }
+.markdown-content { color: #243b53; font-family: Georgia, "Times New Roman", serif; font-size: 1.1rem; line-height: 1.75; }
+.markdown-content h2,
+.markdown-content h3 { margin-top: 2.2rem; color: #102a43; line-height: 1.15; }
+.markdown-content a,
+.preview-sources a { color: #102a43; text-underline-offset: 0.2em; }
+.markdown-content blockquote { margin: 1.5rem 0; padding-left: 1rem; border-left: 3px solid #d13f37; color: #52606d; }
+.markdown-content pre { overflow-x: auto; padding: 1rem; background: #f1f4f6; font-family: monospace; font-size: 0.9rem; }
+.preview-sources { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid #d9e2ec; }
+.preview-sources h2 { margin: 0; color: #102a43; font-size: 1rem; }
+.preview-sources ul { margin: 0.75rem 0 0; padding-left: 1.1rem; }
+.preview-sources li { margin: 0.45rem 0; }
+
 @media (max-width: 56rem) {
   .admin-shell { grid-template-columns: 1fr; }
   .admin-sidebar { min-height: auto; padding: 1rem; }
@@ -247,6 +286,7 @@ td { font-size: 0.95rem; }
 @media (max-width: 40rem) {
   .admin-page-header,
   .article-list li { align-items: flex-start; flex-direction: column; }
+  .preview-toolbar { align-items: flex-start; flex-direction: column; }
   .editorial-summary,
   .field-grid { grid-template-columns: 1fr; }
   .admin-sidebar nav { grid-template-columns: 1fr; }
